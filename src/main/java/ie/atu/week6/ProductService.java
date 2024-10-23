@@ -15,5 +15,28 @@ public class ProductService {
         myList.add(product);
         return myList;
     }
+    public List<Product> getProduct(Product product){
+        return myList;
+    }
+
+    public List<Product> putProduct(Product product){
+        for(int i = 0; i < myList.size(); i++){
+            if(product.getId()==myList.get(i).getId()){
+                product = myList.set(i, product);
+            }
+        }
+        return myList;
+    }
+
+    public List<Product> deleteProduct(Product product){
+        for(int i = 0; i < myList.size(); i++){
+            if(product.getId()==myList.get(i).getId()){
+                product = myList.remove(i);
+            }
+        }
+        return myList;
+    }
 
 }
+
+
